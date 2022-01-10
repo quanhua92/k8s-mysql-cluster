@@ -41,13 +41,13 @@ spec:
         s3:
           bucket: db-cluster-backup
           credentialsSecret: vultr-s3-secret
-          endpointUrl: https://ewr1.vultrobjects.com
+          endpointUrl: https://<insert_vultr_s3_endpoint_here>
       s3-offsite:
         type: s3
         s3:
           bucket: db-cluster-offsite-backup
           credentialsSecret: offsite-s3-secret
-          endpointUrl: https://s3.nextdnn.com
+          endpointUrl: https://<insert_offsite_s3_endpoint_here>
     schedule:
       - name: "daily-backup-vultr"
         schedule: "0 0 * * *"
